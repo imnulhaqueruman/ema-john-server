@@ -12,7 +12,9 @@ const port = 5000
 app.use(bodyParser.json());
 app.use(cors());
 
-
+app.get('/',(req,res) =>{
+    res.send("hello heroku")
+})
 
 
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
